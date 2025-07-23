@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -96,6 +97,11 @@
         .manifesto {
             background-color: var(--color-off-white);
             color: var(--color-navy);
+            background-image: url('https://placehold.co/100x100/F5F5DC/0A1128?text=Patron+Ancla+Burger'); /* Subtle pattern */
+            background-size: 50px;
+            background-repeat: repeat;
+            background-blend-mode: multiply;
+            opacity: 0.8;
         }
         .manifesto p {
             max-width: 800px;
@@ -103,6 +109,8 @@
             font-size: 1.6rem;
             line-height: 1.8;
             font-weight: 400;
+            position: relative;
+            z-index: 1;
         }
         .experience {
             background-color: var(--color-navy);
@@ -130,6 +138,9 @@
             font-size: 2.5rem;
             font-family: var(--font-headline);
             color: var(--color-navy);
+            background-size: 70%;
+            background-repeat: no-repeat;
+            background-position: center;
         }
         .experience-item h3 {
             font-family: var(--font-headline);
@@ -149,6 +160,17 @@
             gap: 80px;
             padding: 100px 10%;
             text-align: left;
+            position: relative;
+        }
+        .hosts::before {
+            content: '';
+            position: absolute;
+            top: 20px; left: 20px;
+            width: 80px; height: 80px;
+            background-image: url('https://placehold.co/80x80/0A1128/B8860B?text=Onda+McBess'); /* Decorative element */
+            background-size: contain;
+            background-repeat: no-repeat;
+            z-index: 0;
         }
         .hosts-photo {
             flex: 1;
@@ -160,9 +182,13 @@
             color: var(--color-navy);
             font-size: 1.5rem;
             border: 2px solid var(--color-gold);
+            position: relative;
+            z-index: 1;
         }
         .hosts-text {
             flex: 1.2;
+            position: relative;
+            z-index: 1;
         }
         .hosts-text h2 {
             font-family: var(--font-headline);
@@ -276,22 +302,22 @@
     <section class="section experience">
         <div class="experience-grid">
             <div class="experience-item">
-                <div class="icon">⚓</div>
+                <div class="icon" style="background-image: url('https://placehold.co/90x90/B8860B/0A1128?text=Yate+McBess');"></div>
                 <h3>YATE IKE</h3>
                 <p>Navega en un clásico. El Yate Ike, probado y confiable, ofrece un viaje seguro y con carácter.</p>
             </div>
             <div class="experience-item">
-                <div class="icon">🍔</div>
+                <div class="icon" style="background-image: url('https://placehold.co/90x90/B8860B/0A1128?text=Burger+McBess');"></div>
                 <h3>ALTA COCINA</h3>
                 <p>Nuestra hamburguesa de autor, elaborada con ingredientes selectos y pasión. Una experiencia culinaria en cada bocado.</p>
             </div>
             <div class="experience-item">
-                <div class="icon">🥂</div>
+                <div class="icon" style="background-image: url('https://placehold.co/90x90/B8860B/0A1128?text=Copa+McBess');"></div>
                 <h3>MARIDAJE SELECTO</h3>
                 <p>Cervezas artesanales y vinos chilenos cuidadosamente elegidos para complementar tu experiencia gastronómica.</p>
             </div>
             <div class="experience-item">
-                <div class="icon">🌅</div>
+                <div class="icon" style="background-image: url('https://placehold.co/90x90/B8860B/0A1128?text=Sol+McBess');"></div>
                 <h3>HORIZONTE INFINITO</h3>
                 <p>Disfruta de atardeceres espectaculares y la serenidad del mar. Un escenario natural para momentos inolvidables.</p>
             </div>
