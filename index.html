@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -147,6 +146,11 @@
             padding: 50px 5%;
             color: var(--color-navy);
         }
+        .gallery h2 {
+            font-family: var(--font-headline);
+            font-size: 3rem;
+            margin-bottom: 50px;
+        }
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -157,13 +161,17 @@
         .gallery-item {
             width: 100%;
             height: 450px;
-            background-color: var(--color-navy); /* Simple background color */
+            background-color: #ccc; /* Placeholder color */
+            background-size: cover;
+            background-position: center;
+            border: 1px solid rgba(0,0,0,0.1);
             display: flex;
             justify-content: center;
             align-items: center;
-            color: var(--color-off-white);
-            font-size: 1.5rem;
-            border: 1px solid rgba(0,0,0,0.1);
+            font-size: 1.2rem;
+            color: var(--color-navy);
+            text-align: center;
+            padding: 10px;
         }
         .hosts {
             background-color: var(--color-navy);
@@ -177,11 +185,11 @@
         .hosts-photo {
             flex: 1;
             height: 550px;
-            background-color: var(--color-off-white); /* Simple background color */
+            background-color: #555; /* Placeholder color */
             display: flex;
             justify-content: center;
             align-items: center;
-            color: var(--color-navy);
+            color: var(--color-off-white);
             font-size: 1.5rem;
             border: 2px solid var(--color-gold);
         }
@@ -197,6 +205,42 @@
         .hosts-text p {
             font-size: 1.2rem;
             line-height: 1.8;
+        }
+        .trajectory {
+            background-color: var(--color-off-white);
+            color: var(--color-navy);
+            padding: 80px 5%;
+        }
+        .trajectory h2 {
+            font-family: var(--font-headline);
+            font-size: 3rem;
+            margin-bottom: 50px;
+        }
+        .trajectory-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .trajectory-item {
+            text-align: left;
+        }
+        .trajectory-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 1px solid rgba(0,0,0,0.1);
+        }
+        .trajectory-item h3 {
+            font-family: var(--font-headline);
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+        .trajectory-item p {
+            font-size: 1.1rem;
+            line-height: 1.7;
         }
         .booking {
             background-color: var(--color-off-white);
@@ -247,6 +291,7 @@
             .hosts-text p { font-size: 1.1rem; }
             .booking h2 { font-size: 2.8rem; }
             .calendar-placeholder { height: 400px; }
+            .trajectory h2 { font-size: 2.5rem; }
         }
 
         @media (max-width: 768px) {
@@ -259,11 +304,14 @@
             .experience-item { max-width: 100%; }
             .experience-item .icon { width: 70px; height: 70px; font-size: 2rem; }
             .experience-item h3 { font-size: 1.6rem; }
+            .gallery h2 { font-size: 2.2rem; margin-bottom: 30px; }
             .gallery-grid { grid-template-columns: 1fr; }
             .gallery-item { height: 250px; }
             .hosts-photo { height: 350px; }
             .hosts-text h2 { font-size: 2.2rem; }
             .hosts-text p { font-size: 1rem; }
+            .trajectory h2 { font-size: 2.2rem; margin-bottom: 30px; }
+            .trajectory-grid { grid-template-columns: 1fr; }
             .calendar-placeholder { height: 300px; font-size: 1.2rem; }
             .calendar-placeholder p { font-size: 1.1rem; }
         }
@@ -275,8 +323,11 @@
             .manifesto p { font-size: 1rem; }
             .experience-item h3 { font-size: 1.4rem; }
             .experience-item p { font-size: 0.9rem; }
+            .gallery-item { font-size: 1rem; }
             .hosts-text h2 { font-size: 1.8rem; }
             .hosts-text p { font-size: 0.9rem; }
+            .trajectory-item h3 { font-size: 1.6rem; }
+            .trajectory-item p { font-size: 0.9rem; }
             .calendar-placeholder { height: 250px; font-size: 1rem; }
         }
     </style>
@@ -325,13 +376,14 @@
     </section>
 
     <section class="section gallery">
+        <h2>NUESTRAS CREACIONES.</h2>
         <div class="gallery-grid">
-            <div class="gallery-item">IMAGEN DE LA EXPERIENCIA</div>
-            <div class="gallery-item">IMAGEN DE LA EXPERIENCIA</div>
-            <div class="gallery-item">IMAGEN DE LA EXPERIENCIA</div>
-            <div class="gallery-item">IMAGEN DE LA EXPERIENCIA</div>
-            <div class="gallery-item">IMAGEN DE LA EXPERIENCIA</div>
-            <div class="gallery-item">IMAGEN DE LA EXPERIENCIA</div>
+            <div class="gallery-item">HAMBURGUESA FRANKLIN BURGERS (JUGOSA)</div>
+            <div class="gallery-item">HAMBURGUESA EL HONESTO MIKE (CON QUESO)</div>
+            <div class="gallery-item">HAMBURGUESA CON TOCINO Y CEBOLLA</div>
+            <div class="gallery-item">HAMBURGUESA CON PAPAS FRITAS</div>
+            <div class="gallery-item">HAMBURGUESA CON INGREDIENTES FRESCOS</div>
+            <div class="gallery-item">HAMBURGUESA GOURMET</div>
         </div>
     </section>
 
@@ -340,6 +392,27 @@
         <div class="hosts-text">
             <h2>LOS ARTESANOS DE LA EXPERIENCIA.</h2>
             <p>Detrás de Boya Burger estamos Tom y Kike. Un director creativo y un estratega, unidos por la pasión por la buena mesa y las experiencias auténticas. Hemos volcado años de expertise en branding y gastronomía para curar cada detalle de esta travesía. Desde la selección de ingredientes hasta la atmósfera a bordo, nuestra promesa es una experiencia inolvidable, honesta y sin pretensiones.</p>
+        </div>
+    </section>
+
+    <section class="section trajectory">
+        <h2>NUESTRA TRAYECTORIA.</h2>
+        <div class="trajectory-grid">
+            <div class="trajectory-item">
+                <img src="https://placehold.co/600x400/0A1128/B8860B?text=Franklin+Burgers+Local" alt="Franklin Burgers Local">
+                <h3>FRANKLIN BURGERS</h3>
+                <p>Fundamos Franklin Burgers con una clara identidad "yankee" en el corazón del Barrio Franklin. Un fenómeno que demostró que un buen concepto es tan importante como la receta. Hamburguesas con carácter y sabor.</p>
+            </div>
+            <div class="trajectory-item">
+                <img src="https://placehold.co/600x400/0A1128/B8860B?text=El+Honesto+Mike+Local" alt="El Honesto Mike Local">
+                <h3>EL HONESTO MIKE</h3>
+                <p>Junto a Beervana, creamos El Honesto Mike. La fusión perfecta entre hamburguesas de autor y el mundo de la cerveza artesanal. Un espacio con estética urbana y rockera, lleno de detalles únicos.</p>
+            </div>
+            <div class="trajectory-item">
+                <img src="https://placehold.co/600x400/0A1128/B8860B?text=El+Pulento+Joe+Local" alt="El Pulento Joe Local">
+                <h3>EL PULENTO JOE</h3>
+                <p>Nuestra influencia se extendió a otros bares como El Pulento Joe en el Barrio Lastarria, consolidando nuestra visión de crear experiencias gastronómicas memorables y con identidad propia.</p>
+            </div>
         </div>
     </section>
 
