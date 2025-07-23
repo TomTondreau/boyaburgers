@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -25,7 +26,7 @@
             -moz-osx-font-smoothing: grayscale;
         }
         .section {
-            padding: 100px 5%;
+            padding: 80px 5%;
             text-align: center;
         }
         .hero {
@@ -34,34 +35,47 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            background-color: var(--color-navy); /* Placeholder for video */
-            background-image: url('https://placehold.co/1920x1080/0A1128/B8860B?text=Video+Yate+Ike+Atardecer');
-            background-size: cover;
-            background-position: center;
             color: var(--color-off-white);
             position: relative;
+            overflow: hidden; /* Hide video overflow */
+        }
+        .hero-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1;
+            transform: translate(-50%, -50%);
+            background-size: cover;
         }
         .hero::before {
             content: '';
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
-            background: rgba(0,0,0,0.4); /* Overlay for text readability */
+            background: rgba(0,0,0,0.5); /* Overlay for text readability */
+            z-index: 0;
         }
         .hero-content {
             position: relative;
             z-index: 1;
             max-width: 900px;
+            padding: 20px;
         }
         .hero h1 {
             font-family: var(--font-headline);
             font-size: 4.5rem;
             margin: 0;
             line-height: 1.1;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
         .hero p {
             font-size: 1.6rem;
             margin: 20px 0 40px 0;
             font-weight: 400;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
         }
         .cta-button {
             font-family: var(--font-body);
@@ -143,9 +157,12 @@
         .gallery-item {
             width: 100%;
             height: 450px;
-            background-color: #ccc;
-            background-size: cover;
-            background-position: center;
+            background-color: var(--color-navy); /* Simple background color */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--color-off-white);
+            font-size: 1.5rem;
             border: 1px solid rgba(0,0,0,0.1);
         }
         .hosts {
@@ -160,10 +177,12 @@
         .hosts-photo {
             flex: 1;
             height: 550px;
-            background-color: #555;
-            background-image: url('https://placehold.co/700x550/0A1128/F5F5DC?text=Tom+y+Kike+en+el+Yate');
-            background-size: cover;
-            background-position: center;
+            background-color: var(--color-off-white); /* Simple background color */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--color-navy);
+            font-size: 1.5rem;
             border: 2px solid var(--color-gold);
         }
         .hosts-text {
@@ -210,38 +229,65 @@
         .calendar-placeholder .cta-button {
             margin-top: 30px;
         }
+
+        /* --- RESPONSIVE DESIGN --- */
         @media (max-width: 1024px) {
+            .section { padding: 60px 5%; }
             .hero h1 { font-size: 3.5rem; }
             .hero p { font-size: 1.3rem; }
             .manifesto p { font-size: 1.4rem; }
-            .hosts { flex-direction: column; text-align: center; }
-            .hosts-photo { width: 100%; }
+            .experience-grid { gap: 40px; }
+            .experience-item { max-width: 220px; }
+            .experience-item .icon { width: 80px; height: 80px; font-size: 2.2rem; }
+            .experience-item h3 { font-size: 1.8rem; }
+            .hosts { flex-direction: column; text-align: center; gap: 40px; }
+            .hosts-photo { width: 80%; height: 450px; }
             .hosts-text { text-align: center; }
             .hosts-text h2 { font-size: 2.8rem; }
+            .hosts-text p { font-size: 1.1rem; }
             .booking h2 { font-size: 2.8rem; }
+            .calendar-placeholder { height: 400px; }
         }
+
         @media (max-width: 768px) {
-            .section { padding: 60px 5%; }
-            .hero h1 { font-size: 2.8rem; }
-            .hero p { font-size: 1.1rem; }
-            .cta-button { padding: 12px 30px; font-size: 1.2rem; }
+            .section { padding: 40px 5%; }
+            .hero h1 { font-size: 2.5rem; }
+            .hero p { font-size: 1.1rem; margin: 15px 0 30px 0; }
+            .cta-button { padding: 15px 30px; font-size: 1.3rem; }
             .manifesto p { font-size: 1.2rem; }
             .experience-grid { gap: 30px; }
             .experience-item { max-width: 100%; }
             .experience-item .icon { width: 70px; height: 70px; font-size: 2rem; }
-            .experience-item h3 { font-size: 1.8rem; }
+            .experience-item h3 { font-size: 1.6rem; }
             .gallery-grid { grid-template-columns: 1fr; }
-            .gallery-item { height: 300px; }
-            .hosts-photo { height: 400px; }
+            .gallery-item { height: 250px; }
+            .hosts-photo { height: 350px; }
             .hosts-text h2 { font-size: 2.2rem; }
             .hosts-text p { font-size: 1rem; }
-            .calendar-placeholder { height: 350px; font-size: 1.5rem; }
+            .calendar-placeholder { height: 300px; font-size: 1.2rem; }
+            .calendar-placeholder p { font-size: 1.1rem; }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 { font-size: 2rem; }
+            .hero p { font-size: 1rem; }
+            .cta-button { padding: 10px 20px; font-size: 1rem; }
+            .manifesto p { font-size: 1rem; }
+            .experience-item h3 { font-size: 1.4rem; }
+            .experience-item p { font-size: 0.9rem; }
+            .hosts-text h2 { font-size: 1.8rem; }
+            .hosts-text p { font-size: 0.9rem; }
+            .calendar-placeholder { height: 250px; font-size: 1rem; }
         }
     </style>
 </head>
 <body>
 
     <section class="section hero">
+        <video autoplay muted loop playsinline class="hero-video" poster="https://placehold.co/1920x1080/0A1128/B8860B?text=Yate+Ike+Video+Poster">
+            <source src="yateike.mp4" type="video/mp4">
+            Tu navegador no soporta el elemento de video.
+        </video>
         <div class="hero-content">
             <h1>LA EXPERIENCIA EXCLUSIVA EN EL MAR.</h1>
             <p>Navega a bordo del histórico Yate Ike. Disfruta de la alta cocina en un entorno inigualable.</p>
@@ -280,17 +326,17 @@
 
     <section class="section gallery">
         <div class="gallery-grid">
-            <div class="gallery-item" style="background-image: url('https://placehold.co/600x450/0A1128/B8860B?text=Yate+Ike+Exterior');"></div>
-            <div class="gallery-item" style="background-image: url('https://placehold.co/600x450/0A1128/B8860B?text=Hamburguesa+Gourmet');"></div>
-            <div class="gallery-item" style="background-image: url('https://placehold.co/600x450/0A1128/B8860B?text=Brindis+Atardecer');"></div>
-            <div class="gallery-item" style="background-image: url('https://placehold.co/600x450/0A1128/B8860B?text=Interior+Yate+Ike');"></div>
-            <div class="gallery-item" style="background-image: url('https://placehold.co/600x450/0A1128/B8860B?text=Detalle+Parrilla');"></div>
-            <div class="gallery-item" style="background-image: url('https://placehold.co/600x450/0A1128/B8860B?text=Vista+Mar');"></div>
+            <div class="gallery-item">IMAGEN DE LA EXPERIENCIA</div>
+            <div class="gallery-item">IMAGEN DE LA EXPERIENCIA</div>
+            <div class="gallery-item">IMAGEN DE LA EXPERIENCIA</div>
+            <div class="gallery-item">IMAGEN DE LA EXPERIENCIA</div>
+            <div class="gallery-item">IMAGEN DE LA EXPERIENCIA</div>
+            <div class="gallery-item">IMAGEN DE LA EXPERIENCIA</div>
         </div>
     </section>
 
     <section class="section hosts">
-        <div class="hosts-photo"></div>
+        <div class="hosts-photo">FOTO TOM Y KIKE</div>
         <div class="hosts-text">
             <h2>LOS ARTESANOS DE LA EXPERIENCIA.</h2>
             <p>Detrás de Boya Burger estamos Tom y Kike. Un director creativo y un estratega, unidos por la pasión por la buena mesa y las experiencias auténticas. Hemos volcado años de expertise en branding y gastronomía para curar cada detalle de esta travesía. Desde la selección de ingredientes hasta la atmósfera a bordo, nuestra promesa es una experiencia inolvidable, honesta y sin pretensiones.</p>
