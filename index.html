@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boya Burger - La Experiencia Exclusiva en el Mar</title>
+    <title>Boya Burger - Experiencia Exclusiva</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
@@ -26,7 +26,7 @@
             -moz-osx-font-smoothing: grayscale;
         }
         .section {
-            padding: 80px 5%;
+            padding: 60px 5%; /* Reduced padding */
             text-align: center;
         }
         .hero {
@@ -35,28 +35,18 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            background-color: var(--color-navy); /* Solid background */
+            background-image: url('https://placehold.co/1920x1080/0A1128/B8860B?text=Yate+Ike+Principal'); /* Placeholder image */
+            background-size: cover;
+            background-position: center;
             color: var(--color-off-white);
             position: relative;
-            overflow: hidden; /* Hide video overflow */
-        }
-        .hero-video {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            min-width: 100%;
-            min-height: 100%;
-            width: auto;
-            height: auto;
-            z-index: -1;
-            transform: translate(-50%, -50%);
-            background-size: cover;
         }
         .hero::before {
             content: '';
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
-            background: rgba(0,0,0,0.5); /* Overlay for text readability */
-            z-index: 0;
+            background: rgba(0,0,0,0.4); /* Overlay for text readability */
         }
         .hero-content {
             position: relative;
@@ -66,23 +56,23 @@
         }
         .hero h1 {
             font-family: var(--font-headline);
-            font-size: 4.5rem;
+            font-size: 4rem; /* Slightly reduced font size */
             margin: 0;
             line-height: 1.1;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            /* Removed text-shadow */
         }
         .hero p {
-            font-size: 1.6rem;
-            margin: 20px 0 40px 0;
+            font-size: 1.4rem; /* Slightly reduced font size */
+            margin: 15px 0 30px 0; /* Reduced margin */
             font-weight: 400;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+            /* Removed text-shadow */
         }
         .cta-button {
             font-family: var(--font-body);
             background-color: var(--color-gold);
             color: var(--color-navy);
-            padding: 18px 45px;
-            font-size: 1.5rem;
+            padding: 15px 35px; /* Reduced padding */
+            font-size: 1.3rem; /* Reduced font size */
             text-decoration: none;
             border: none;
             cursor: pointer;
@@ -97,20 +87,15 @@
         .manifesto {
             background-color: var(--color-off-white);
             color: var(--color-navy);
-            background-image: url('https://placehold.co/100x100/F5F5DC/0A1128?text=Patron+Ancla+Burger'); /* Subtle pattern */
-            background-size: 50px;
-            background-repeat: repeat;
-            background-blend-mode: multiply;
-            opacity: 0.8;
+            /* Removed background-image and related properties */
         }
         .manifesto p {
-            max-width: 800px;
+            max-width: 700px; /* Reduced max-width */
             margin: 0 auto;
-            font-size: 1.6rem;
-            line-height: 1.8;
+            font-size: 1.4rem; /* Reduced font size */
+            line-height: 1.6;
             font-weight: 400;
-            position: relative;
-            z-index: 1;
+            /* Removed position and z-index */
         }
         .experience {
             background-color: var(--color-navy);
@@ -118,70 +103,61 @@
         .experience-grid {
             display: flex;
             justify-content: center;
-            gap: 60px;
-            margin-top: 50px;
+            gap: 40px; /* Reduced gap */
+            margin-top: 40px; /* Reduced margin */
             flex-wrap: wrap;
         }
         .experience-item {
-            max-width: 280px;
+            max-width: 250px; /* Reduced max-width */
             color: var(--color-off-white);
         }
         .experience-item .icon {
-            width: 90px;
-            height: 90px;
+            width: 80px; /* Reduced size */
+            height: 80px; /* Reduced size */
             background-color: var(--color-gold);
-            margin: 0 auto 25px auto;
+            margin: 0 auto 20px auto; /* Reduced margin */
             border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 2.5rem;
+            font-size: 2.2rem; /* Reduced font size */
             font-family: var(--font-headline);
             color: var(--color-navy);
-            background-size: 70%;
-            background-repeat: no-repeat;
-            background-position: center;
+            /* Removed background-image for simplicity */
         }
         .experience-item h3 {
             font-family: var(--font-headline);
-            font-size: 2.2rem;
-            margin-bottom: 15px;
+            font-size: 2rem; /* Reduced font size */
+            margin-bottom: 10px; /* Reduced margin */
             color: var(--color-off-white);
         }
         .experience-item p {
-            font-size: 1.1rem;
-            line-height: 1.7;
+            font-size: 1rem; /* Reduced font size */
+            line-height: 1.6;
         }
         .hosts {
             background-color: var(--color-navy);
             color: var(--color-off-white);
             display: flex;
             align-items: center;
-            gap: 80px;
-            padding: 100px 10%;
+            gap: 60px; /* Reduced gap */
+            padding: 80px 8%; /* Reduced padding */
             text-align: left;
             position: relative;
         }
-        .hosts::before {
-            content: '';
-            position: absolute;
-            top: 20px; left: 20px;
-            width: 80px; height: 80px;
-            background-image: url('https://placehold.co/80x80/0A1128/B8860B?text=Onda+McBess'); /* Decorative element */
-            background-size: contain;
-            background-repeat: no-repeat;
-            z-index: 0;
+        .hosts::before { /* Removed decorative element */
+            content: none;
         }
         .hosts-photo {
             flex: 1;
-            height: 550px;
+            height: 450px; /* Reduced height */
             background-color: var(--color-off-white); /* Placeholder color */
             display: flex;
             justify-content: center;
             align-items: center;
             color: var(--color-navy);
-            font-size: 1.5rem;
-            border: 2px solid var(--color-gold);
+            font-size: 1.2rem; /* Reduced font size */
+            /* Removed border */
             position: relative;
             z-index: 1;
         }
@@ -192,13 +168,13 @@
         }
         .hosts-text h2 {
             font-family: var(--font-headline);
-            font-size: 3.5rem;
-            margin-bottom: 25px;
+            font-size: 3rem; /* Reduced font size */
+            margin-bottom: 20px; /* Reduced margin */
             line-height: 1.2;
         }
         .hosts-text p {
-            font-size: 1.2rem;
-            line-height: 1.8;
+            font-size: 1.1rem; /* Reduced font size */
+            line-height: 1.7;
         }
         .booking {
             background-color: var(--color-off-white);
@@ -206,37 +182,37 @@
         }
         .booking h2 {
             font-family: var(--font-headline);
-            font-size: 3.5rem;
+            font-size: 3rem; /* Reduced font size */
             color: var(--color-navy);
-            margin-bottom: 50px;
+            margin-bottom: 40px; /* Reduced margin */
         }
         .calendar-placeholder {
-            max-width: 900px;
-            height: 500px;
+            max-width: 800px; /* Reduced max-width */
+            height: 400px; /* Reduced height */
             background-color: var(--color-navy);
-            margin: 50px auto;
+            margin: 40px auto; /* Reduced margin */
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            font-size: 2rem;
-            border: 2px dashed var(--color-gold);
+            font-size: 1.8rem; /* Reduced font size */
+            /* Removed border */
             color: var(--color-off-white);
             padding: 20px;
         }
         .calendar-placeholder p {
-            font-size: 1.5rem;
-            margin-bottom: 20px;
+            font-size: 1.3rem; /* Reduced font size */
+            margin-bottom: 15px; /* Reduced margin */
         }
         .calendar-placeholder .cta-button {
-            margin-top: 30px;
+            margin-top: 20px; /* Reduced margin */
         }
         .footer {
             background-color: var(--color-navy);
             color: var(--color-off-white);
-            padding: 30px 5%;
+            padding: 20px 5%; /* Reduced padding */
             text-align: center;
-            font-size: 0.9rem;
+            font-size: 0.8rem; /* Reduced font size */
             border-top: 1px solid rgba(255,255,255,0.1);
         }
         .footer a {
@@ -250,92 +226,87 @@
 
         /* --- RESPONSIVE DESIGN --- */
         @media (max-width: 1024px) {
-            .section { padding: 60px 5%; }
-            .hero h1 { font-size: 3.5rem; }
-            .hero p { font-size: 1.3rem; }
-            .manifesto p { font-size: 1.4rem; }
-            .experience-grid { gap: 40px; }
-            .experience-item { max-width: 220px; }
-            .experience-item .icon { width: 80px; height: 80px; font-size: 2.2rem; }
-            .experience-item h3 { font-size: 1.8rem; }
-            .hosts { flex-direction: column; text-align: center; gap: 40px; }
-            .hosts-photo { width: 80%; height: 450px; }
-            .hosts-text { text-align: center; }
-            .hosts-text h2 { font-size: 2.8rem; }
-            .hosts-text p { font-size: 1.1rem; }
-            .booking h2 { font-size: 2.8rem; }
-            .calendar-placeholder { height: 400px; }
+            .section { padding: 50px 5%; }
+            .hero h1 { font-size: 3rem; }
+            .hero p { font-size: 1.2rem; }
+            .manifesto p { font-size: 1.3rem; }
+            .experience-grid { gap: 30px; }
+            .experience-item { max-width: 200px; }
+            .experience-item .icon { width: 70px; height: 70px; font-size: 2rem; }
+            .experience-item h3 { font-size: 1.6rem; }
+            .hosts { flex-direction: column; text-align: center; gap: 30px; }
+            .hosts-photo { width: 90%; height: 400px; }
+            .hosts-text h2 { font-size: 2.5rem; }
+            .hosts-text p { font-size: 1rem; }
+            .booking h2 { font-size: 2.5rem; }
+            .calendar-placeholder { height: 350px; }
         }
 
         @media (max-width: 768px) {
-            .section { padding: 40px 5%; }
-            .hero h1 { font-size: 2.5rem; }
-            .hero p { font-size: 1.1rem; margin: 15px 0 30px 0; }
-            .cta-button { padding: 15px 30px; font-size: 1.3rem; }
-            .manifesto p { font-size: 1.2rem; }
-            .experience-grid { gap: 30px; }
+            .section { padding: 30px 5%; }
+            .hero h1 { font-size: 2.2rem; }
+            .hero p { font-size: 1rem; margin: 10px 0 20px 0; }
+            .cta-button { padding: 10px 25px; font-size: 1.1rem; }
+            .manifesto p { font-size: 1.1rem; }
+            .experience-grid { gap: 20px; }
             .experience-item { max-width: 100%; }
-            .experience-item .icon { width: 70px; height: 70px; font-size: 2rem; }
-            .experience-item h3 { font-size: 1.6rem; }
-            .hosts-photo { height: 350px; }
-            .hosts-text h2 { font-size: 2.2rem; }
-            .hosts-text p { font-size: 1rem; }
-            .calendar-placeholder { height: 300px; font-size: 1.2rem; }
-            .calendar-placeholder p { font-size: 1.1rem; }
+            .experience-item .icon { width: 60px; height: 60px; font-size: 1.8rem; }
+            .experience-item h3 { font-size: 1.4rem; }
+            .hosts-photo { height: 300px; }
+            .hosts-text h2 { font-size: 2rem; }
+            .hosts-text p { font-size: 0.9rem; }
+            .calendar-placeholder { height: 250px; font-size: 1rem; }
+            .calendar-placeholder p { font-size: 0.9rem; }
         }
 
         @media (max-width: 480px) {
-            .hero h1 { font-size: 2rem; }
-            .hero p { font-size: 1rem; }
-            .cta-button { padding: 10px 20px; font-size: 1rem; }
-            .manifesto p { font-size: 1rem; }
-            .experience-item h3 { font-size: 1.4rem; }
-            .experience-item p { font-size: 0.9rem; }
-            .hosts-text h2 { font-size: 1.8rem; }
-            .hosts-text p { font-size: 0.9rem; }
-            .calendar-placeholder { height: 250px; font-size: 1rem; }
+            .hero h1 { font-size: 1.8rem; }
+            .hero p { font-size: 0.9rem; }
+            .cta-button { padding: 8px 15px; font-size: 0.9rem; }
+            .manifesto p { font-size: 0.9rem; }
+            .experience-item h3 { font-size: 1.2rem; }
+            .experience-item p { font-size: 0.8rem; }
+            .hosts-text h2 { font-size: 1.6rem; }
+            .hosts-text p { font-size: 0.8rem; }
+            .calendar-placeholder { height: 200px; font-size: 0.9rem; }
         }
     </style>
 </head>
 <body>
 
     <section class="section hero">
-        <video autoplay muted loop playsinline class="hero-video" poster="https://placehold.co/1920x1080/0A1128/B8860B?text=Yate+Ike+Video+Poster">
-            <source src="yateikeburger.mp4" type="video/mp4">
-            Tu navegador no soporta el elemento de video.
-        </video>
         <div class="hero-content">
             <h1>LA EXPERIENCIA EXCLUSIVA EN EL MAR.</h1>
-            <p>Navega a bordo del histórico Yate Ike. Disfruta de la alta cocina en un entorno inigualable.</p>
+            <p>Navega a bordo del histórico Yate Ike. Alta cocina en un entorno inigualable.</p>
             <a href="#booking-section" class="cta-button">RESERVAR MI PUESTO</a>
         </div>
     </section>
 
     <section class="section manifesto">
-        <p>En Boya Burger, redefinimos la gastronomía. No somos un restaurante, somos una travesía. Una invitación a desconectar del ruido y reconectar con lo esencial: el sabor, la compañía y la inmensidad del océano. Cada viaje es una edición limitada, diseñada para quienes buscan más que una comida: una historia que contar.</p>
+        <p>Redefinimos la gastronomía. Una travesía para desconectar y reconectar. Cada viaje es una edición limitada.</p>
     </section>
 
     <section class="section experience">
         <div class="experience-grid">
             <div class="experience-item">
-                <div class="icon" style="background-image: url('https://placehold.co/90x90/B8860B/0A1128?text=Yate+McBess');"></div>
+                <div class="icon">⚓</div>
                 <h3>YATE IKE</h3>
-                <p>Navega en un clásico. El Yate Ike, probado y confiable, ofrece un viaje seguro y con carácter.</p>
+                <p>Navega en un clásico. Probado y confiable.</p>
             </div>
             <div class="experience-item">
-                <div class="icon" style="background-image: url('https://placehold.co/90x90/B8860B/0A1128?text=Burger+McBess');"></div>
+                <div class="icon">🍔</div>
                 <h3>ALTA COCINA</h3>
-                <p>Nuestra hamburguesa de autor, elaborada con ingredientes selectos y pasión. Una experiencia culinaria en cada bocado.</p>
+                <p>Hamburguesa de autor. Ingredientes selectos y pasión.</p>
             </div>
             <div class="experience-item">
-                <div class="icon" style="background-image: url('https://placehold.co/90x90/B8860B/0A1128?text=Copa+McBess');"></div>
-                <h3>MARIDAJE SELECTO</h3>
-                <p>Cervezas artesanales y vinos chilenos cuidadosamente elegidos para complementar tu experiencia gastronómica.</p>
+                <div class="icon">🥂</div>
+                <h3>MARIDAJE</h3>
+                <p>Cervezas y vinos chilenos. Complemento perfecto.</p>
             </div>
             <div class="experience-item">
-                <div class="icon" style="background-image: url('https://placehold.co/90x90/B8860B/0A1128?text=Sol+McBess');"></div>
-                <h3>HORIZONTE INFINITO</h3>
-                <p>Disfruta de atardeceres espectaculares y la serenidad del mar. Un escenario natural para momentos inolvidables.</p>
+                <div class="icon">🌅</div>
+                <h3>ATARDECER</h3>
+                <p>Vistas espectaculares. Momentos inolvidables.</p>
             </div>
         </div>
     </section>
@@ -344,14 +315,14 @@
         <div class="hosts-photo">FOTO TOM Y KIKE</div>
         <div class="hosts-text">
             <h2>LOS ARTESANOS DE LA EXPERIENCIA.</h2>
-            <p>Detrás de Boya Burger estamos Tom y Kike. Un director creativo y un estratega, unidos por la pasión por la buena mesa y las experiencias auténticas. Hemos volcado años de expertise en branding y gastronomía para curar cada detalle de esta travesía. Desde la selección de ingredientes hasta la atmósfera a bordo, nuestra promesa es una experiencia inolvidable, honesta y sin pretensiones.</p>
+            <p>Tom y Kike. Pasión por la buena mesa y experiencias auténticas. Curamos cada detalle. Nuestra promesa: inolvidable, honesta, sin pretensiones.</p>
         </div>
     </section>
 
     <section id="booking-section" class="section booking">
         <h2>ASEGURA TU LUGAR.</h2>
         <div class="calendar-placeholder">
-            <p>Aquí se integrará el calendario de reservas y el selector de puestos.</p>
+            <p>Calendario de reservas y selector de puestos.</p>
             <p>Fechas limitadas. Experiencia exclusiva.</p>
             <a href="#" class="cta-button">CONSULTAR DISPONIBILIDAD</a>
         </div>
