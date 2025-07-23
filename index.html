@@ -1,28 +1,26 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boya Burger - La mejor hamburguesa no está en tierra.</title>
+    <title>Boya Burger - La Experiencia Exclusiva en el Mar</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;700&family=League+Spartan:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --color-black: #111111;
-            --color-white: #F8F8F8;
-            --color-yellow: #FFD700;
-            --font-headline: 'League Spartan', sans-serif;
-            --font-subhead: 'Bebas Neue', sans-serif;
-            --font-body: 'Inter', sans-serif;
+            --color-navy: #0A1128;
+            --color-off-white: #F5F5DC;
+            --color-gold: #B8860B;
+            --font-headline: 'Montserrat', sans-serif;
+            --font-body: 'Open Sans', sans-serif;
         }
         body {
             margin: 0;
             padding: 0;
             font-family: var(--font-body);
-            background-color: var(--color-black);
-            color: var(--color-white);
+            background-color: var(--color-navy);
+            color: var(--color-off-white);
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
@@ -36,204 +34,276 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            background-color: #333; /* Placeholder for video */
-            background-image: url('https://placehold.co/1920x1080/333333/111111?text=Video+del+Yate');
+            background-color: var(--color-navy); /* Placeholder for video */
+            background-image: url('https://placehold.co/1920x1080/0A1128/B8860B?text=Video+Yate+Ike+Atardecer');
             background-size: cover;
             background-position: center;
-            color: var(--color-white);
+            color: var(--color-off-white);
+            position: relative;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.4); /* Overlay for text readability */
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
         }
         .hero h1 {
             font-family: var(--font-headline);
-            font-size: 5rem;
+            font-size: 4.5rem;
             margin: 0;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            line-height: 1.1;
         }
         .hero p {
-            font-size: 1.5rem;
-            margin: 10px 0 30px 0;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+            font-size: 1.6rem;
+            margin: 20px 0 40px 0;
+            font-weight: 400;
         }
         .cta-button {
-            font-family: var(--font-subhead);
-            background-color: var(--color-yellow);
-            color: var(--color-black);
-            padding: 15px 40px;
-            font-size: 1.8rem;
+            font-family: var(--font-body);
+            background-color: var(--color-gold);
+            color: var(--color-navy);
+            padding: 18px 45px;
+            font-size: 1.5rem;
             text-decoration: none;
             border: none;
             cursor: pointer;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            font-weight: 600;
+            letter-spacing: 1px;
         }
         .cta-button:hover {
-            background-color: var(--color-white);
+            background-color: var(--color-off-white);
+            color: var(--color-navy);
         }
         .manifesto {
-            background-color: var(--color-black);
+            background-color: var(--color-off-white);
+            color: var(--color-navy);
         }
         .manifesto p {
-            max-width: 700px;
+            max-width: 800px;
             margin: 0 auto;
-            font-size: 1.8rem;
-            line-height: 1.6;
+            font-size: 1.6rem;
+            line-height: 1.8;
+            font-weight: 400;
         }
         .experience {
-            background-color: var(--color-white);
-            color: var(--color-black);
+            background-color: var(--color-navy);
         }
         .experience-grid {
             display: flex;
             justify-content: center;
-            gap: 50px;
+            gap: 60px;
             margin-top: 50px;
             flex-wrap: wrap;
         }
         .experience-item {
-            max-width: 250px;
+            max-width: 280px;
+            color: var(--color-off-white);
         }
         .experience-item .icon {
-            width: 80px;
-            height: 80px;
-            background-color: var(--color-yellow);
-            margin: 0 auto 20px auto;
+            width: 90px;
+            height: 90px;
+            background-color: var(--color-gold);
+            margin: 0 auto 25px auto;
             border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 2rem;
+            font-size: 2.5rem;
             font-family: var(--font-headline);
+            color: var(--color-navy);
         }
         .experience-item h3 {
-            font-family: var(--font-subhead);
-            font-size: 2rem;
-            margin-bottom: 10px;
+            font-family: var(--font-headline);
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+            color: var(--color-off-white);
+        }
+        .experience-item p {
+            font-size: 1.1rem;
+            line-height: 1.7;
         }
         .gallery {
-            background-color: var(--color-black);
+            background-color: var(--color-off-white);
             padding: 50px 5%;
+            color: var(--color-navy);
         }
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 15px;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 20px;
             max-width: 1200px;
             margin: 0 auto;
         }
         .gallery-item {
             width: 100%;
-            height: 400px;
-            background-color: #555;
+            height: 450px;
+            background-color: #ccc;
             background-size: cover;
             background-position: center;
+            border: 1px solid rgba(0,0,0,0.1);
         }
         .hosts {
-            background-color: var(--color-white);
-            color: var(--color-black);
+            background-color: var(--color-navy);
+            color: var(--color-off-white);
             display: flex;
             align-items: center;
-            gap: 50px;
+            gap: 80px;
             padding: 100px 10%;
             text-align: left;
         }
         .hosts-photo {
             flex: 1;
-            height: 500px;
-            background-color: #ccc;
-            background-image: url('https://placehold.co/600x500/cccccc/111111?text=Tom+y+Kike');
+            height: 550px;
+            background-color: #555;
+            background-image: url('https://placehold.co/700x550/0A1128/F5F5DC?text=Tom+y+Kike+en+el+Yate');
+            background-size: cover;
+            background-position: center;
+            border: 2px solid var(--color-gold);
         }
         .hosts-text {
-            flex: 1;
+            flex: 1.2;
         }
         .hosts-text h2 {
             font-family: var(--font-headline);
-            font-size: 3rem;
+            font-size: 3.5rem;
+            margin-bottom: 25px;
+            line-height: 1.2;
+        }
+        .hosts-text p {
+            font-size: 1.2rem;
+            line-height: 1.8;
         }
         .booking {
-            background-color: var(--color-black);
+            background-color: var(--color-off-white);
+            color: var(--color-navy);
         }
         .booking h2 {
             font-family: var(--font-headline);
-            font-size: 3rem;
-            color: var(--color-white);
+            font-size: 3.5rem;
+            color: var(--color-navy);
+            margin-bottom: 50px;
         }
         .calendar-placeholder {
-            max-width: 800px;
-            height: 400px;
-            background-color: #222;
+            max-width: 900px;
+            height: 500px;
+            background-color: var(--color-navy);
             margin: 50px auto;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             font-size: 2rem;
-            border: 2px dashed var(--color-yellow);
+            border: 2px dashed var(--color-gold);
+            color: var(--color-off-white);
+            padding: 20px;
+        }
+        .calendar-placeholder p {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+        .calendar-placeholder .cta-button {
+            margin-top: 30px;
+        }
+        @media (max-width: 1024px) {
+            .hero h1 { font-size: 3.5rem; }
+            .hero p { font-size: 1.3rem; }
+            .manifesto p { font-size: 1.4rem; }
+            .hosts { flex-direction: column; text-align: center; }
+            .hosts-photo { width: 100%; }
+            .hosts-text { text-align: center; }
+            .hosts-text h2 { font-size: 2.8rem; }
+            .booking h2 { font-size: 2.8rem; }
         }
         @media (max-width: 768px) {
-            .hero h1 { font-size: 3rem; }
-            .hero p { font-size: 1.2rem; }
-            .hosts { flex-direction: column; }
+            .section { padding: 60px 5%; }
+            .hero h1 { font-size: 2.8rem; }
+            .hero p { font-size: 1.1rem; }
+            .cta-button { padding: 12px 30px; font-size: 1.2rem; }
+            .manifesto p { font-size: 1.2rem; }
+            .experience-grid { gap: 30px; }
+            .experience-item { max-width: 100%; }
+            .experience-item .icon { width: 70px; height: 70px; font-size: 2rem; }
+            .experience-item h3 { font-size: 1.8rem; }
+            .gallery-grid { grid-template-columns: 1fr; }
+            .gallery-item { height: 300px; }
+            .hosts-photo { height: 400px; }
+            .hosts-text h2 { font-size: 2.2rem; }
+            .hosts-text p { font-size: 1rem; }
+            .calendar-placeholder { height: 350px; font-size: 1.5rem; }
         }
     </style>
 </head>
 <body>
 
     <section class="section hero">
-        <h1>LA MEJOR HAMBURGUESA NO ESTÁ EN TIERRA.</h1>
-        <p>Una experiencia exclusiva para 8 personas por viaje.</p>
-        <a href="#booking-section" class="cta-button">RESERVAR MI PUESTO</a>
+        <div class="hero-content">
+            <h1>LA EXPERIENCIA EXCLUSIVA EN EL MAR.</h1>
+            <p>Navega a bordo del histórico Yate Ike. Disfruta de la alta cocina en un entorno inigualable.</p>
+            <a href="#booking-section" class="cta-button">RESERVAR MI PUESTO</a>
+        </div>
     </section>
 
     <section class="section manifesto">
-        <p>Nos aburrimos de los restaurantes con muros. De las mesas apretadas y el ruido de la ciudad.<br><br>Creamos Boya Burger para los que prefieren el sonido del mar y una buena conversación.<br><br>Esto no es una cena. Es un escape. Y solo hay lugar para unos pocos.</p>
+        <p>En Boya Burger, redefinimos la gastronomía. No somos un restaurante, somos una travesía. Una invitación a desconectar del ruido y reconectar con lo esencial: el sabor, la compañía y la inmensidad del océano. Cada viaje es una edición limitada, diseñada para quienes buscan más que una comida: una historia que contar.</p>
     </section>
 
     <section class="section experience">
         <div class="experience-grid">
             <div class="experience-item">
-                <div class="icon">Y</div>
-                <h3>YATE PRIVADO</h3>
-                <p>Solo 8 puestos. Sin multitudes, sin esperas. El yate es tuyo y de tus amigos.</p>
+                <div class="icon">⚓</div>
+                <h3>YATE IKE</h3>
+                <p>Navega en un clásico. El Yate Ike, probado y confiable, ofrece un viaje seguro y con carácter.</p>
             </div>
             <div class="experience-item">
-                <div class="icon">B</div>
-                <h3>3 BURGERS DE AUTOR</h3>
-                <p>Nuestro blend, pan de papa, cheddar premium. Servidas frescas, una por una, directo de la parrilla.</p>
+                <div class="icon">🍔</div>
+                <h3>ALTA COCINA</h3>
+                <p>Nuestra hamburguesa de autor, elaborada con ingredientes selectos y pasión. Una experiencia culinaria en cada bocado.</p>
             </div>
             <div class="experience-item">
-                <div class="icon">C</div>
-                <h3>BARRA LIBRE</h3>
-                <p>Cerveza artesanal local y vinos seleccionados. Bebe sin preocupaciones, nosotros nos encargamos.</p>
+                <div class="icon">🥂</div>
+                <h3>MARIDAJE SELECTO</h3>
+                <p>Cervezas artesanales y vinos chilenos cuidadosamente elegidos para complementar tu experiencia gastronómica.</p>
             </div>
             <div class="experience-item">
-                <div class="icon">S</div>
-                <h3>ATARDECER EN EL MAR</h3>
-                <p>La mejor vista de la costa. La banda sonora la eliges tú. O el silencio. Tú decides.</p>
+                <div class="icon">🌅</div>
+                <h3>HORIZONTE INFINITO</h3>
+                <p>Disfruta de atardeceres espectaculares y la serenidad del mar. Un escenario natural para momentos inolvidables.</p>
             </div>
         </div>
     </section>
 
     <section class="section gallery">
         <div class="gallery-grid">
-            <div class="gallery-item" style="background-image: url('https://placehold.co/600x400/555/f8f8f8?text=Foto+1');"></div>
-            <div class="gallery-item" style="background-image: url('https://placehold.co/600x400/555/f8f8f8?text=Foto+2'); grid-row: span 2; height: 815px;"></div>
-            <div class="gallery-item" style="background-image: url('https://placehold.co/600x400/555/f8f8f8?text=Foto+3');"></div>
-            <div class="gallery-item" style="background-image: url('https://placehold.co/600x400/555/f8f8f8?text=Foto+4');"></div>
-            <div class="gallery-item" style="background-image: url('https://placehold.co/600x400/555/f8f8f8?text=Foto+5');"></div>
+            <div class="gallery-item" style="background-image: url('https://placehold.co/600x450/0A1128/B8860B?text=Yate+Ike+Exterior');"></div>
+            <div class="gallery-item" style="background-image: url('https://placehold.co/600x450/0A1128/B8860B?text=Hamburguesa+Gourmet');"></div>
+            <div class="gallery-item" style="background-image: url('https://placehold.co/600x450/0A1128/B8860B?text=Brindis+Atardecer');"></div>
+            <div class="gallery-item" style="background-image: url('https://placehold.co/600x450/0A1128/B8860B?text=Interior+Yate+Ike');"></div>
+            <div class="gallery-item" style="background-image: url('https://placehold.co/600x450/0A1128/B8860B?text=Detalle+Parrilla');"></div>
+            <div class="gallery-item" style="background-image: url('https://placehold.co/600x450/0A1128/B8860B?text=Vista+Mar');"></div>
         </div>
     </section>
 
     <section class="section hosts">
         <div class="hosts-photo"></div>
         <div class="hosts-text">
-            <h2>LOS DUEÑOS DE LA PARRILLA.</h2>
-            <p>Somos Tom y Kike. Crecimos con punk rock y tablas de skate. Después de años creando marcas y restaurantes, decidimos volver a lo básico: buena comida, buena música y buen ambiente. Boya Burger es nuestro proyecto más personal. Nosotros estamos en el barco, en la parrilla y sirviendo las cervezas. Súbete a bordo.</p>
+            <h2>LOS ARTESANOS DE LA EXPERIENCIA.</h2>
+            <p>Detrás de Boya Burger estamos Tom y Kike. Un director creativo y un estratega, unidos por la pasión por la buena mesa y las experiencias auténticas. Hemos volcado años de expertise en branding y gastronomía para curar cada detalle de esta travesía. Desde la selección de ingredientes hasta la atmósfera a bordo, nuestra promesa es una experiencia inolvidable, honesta y sin pretensiones.</p>
         </div>
     </section>
 
     <section id="booking-section" class="section booking">
-        <h2>ELIGE TU FECHA.</h2>
+        <h2>ASEGURA TU LUGAR.</h2>
         <div class="calendar-placeholder">
-            <p>AQUÍ VA EL CALENDARIO DE RESERVAS</p>
+            <p>Aquí se integrará el calendario de reservas y el selector de puestos.</p>
+            <p>Fechas limitadas. Experiencia exclusiva.</p>
+            <a href="#" class="cta-button">CONSULTAR DISPONIBILIDAD</a>
         </div>
-        <a href="#" class="cta-button">PAGAR Y RESERVAR</a>
     </section>
 
 </body>
