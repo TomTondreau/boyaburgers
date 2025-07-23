@@ -1,0 +1,240 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boya Burger - La mejor hamburguesa no está en tierra.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;700&family=League+Spartan:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-black: #111111;
+            --color-white: #F8F8F8;
+            --color-yellow: #FFD700;
+            --font-headline: 'League Spartan', sans-serif;
+            --font-subhead: 'Bebas Neue', sans-serif;
+            --font-body: 'Inter', sans-serif;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: var(--font-body);
+            background-color: var(--color-black);
+            color: var(--color-white);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .section {
+            padding: 100px 5%;
+            text-align: center;
+        }
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #333; /* Placeholder for video */
+            background-image: url('https://placehold.co/1920x1080/333333/111111?text=Video+del+Yate');
+            background-size: cover;
+            background-position: center;
+            color: var(--color-white);
+        }
+        .hero h1 {
+            font-family: var(--font-headline);
+            font-size: 5rem;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        .hero p {
+            font-size: 1.5rem;
+            margin: 10px 0 30px 0;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+        .cta-button {
+            font-family: var(--font-subhead);
+            background-color: var(--color-yellow);
+            color: var(--color-black);
+            padding: 15px 40px;
+            font-size: 1.8rem;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: var(--color-white);
+        }
+        .manifesto {
+            background-color: var(--color-black);
+        }
+        .manifesto p {
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.8rem;
+            line-height: 1.6;
+        }
+        .experience {
+            background-color: var(--color-white);
+            color: var(--color-black);
+        }
+        .experience-grid {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-top: 50px;
+            flex-wrap: wrap;
+        }
+        .experience-item {
+            max-width: 250px;
+        }
+        .experience-item .icon {
+            width: 80px;
+            height: 80px;
+            background-color: var(--color-yellow);
+            margin: 0 auto 20px auto;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            font-family: var(--font-headline);
+        }
+        .experience-item h3 {
+            font-family: var(--font-subhead);
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        .gallery {
+            background-color: var(--color-black);
+            padding: 50px 5%;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .gallery-item {
+            width: 100%;
+            height: 400px;
+            background-color: #555;
+            background-size: cover;
+            background-position: center;
+        }
+        .hosts {
+            background-color: var(--color-white);
+            color: var(--color-black);
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            padding: 100px 10%;
+            text-align: left;
+        }
+        .hosts-photo {
+            flex: 1;
+            height: 500px;
+            background-color: #ccc;
+            background-image: url('https://placehold.co/600x500/cccccc/111111?text=Tom+y+Kike');
+        }
+        .hosts-text {
+            flex: 1;
+        }
+        .hosts-text h2 {
+            font-family: var(--font-headline);
+            font-size: 3rem;
+        }
+        .booking {
+            background-color: var(--color-black);
+        }
+        .booking h2 {
+            font-family: var(--font-headline);
+            font-size: 3rem;
+            color: var(--color-white);
+        }
+        .calendar-placeholder {
+            max-width: 800px;
+            height: 400px;
+            background-color: #222;
+            margin: 50px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            border: 2px dashed var(--color-yellow);
+        }
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 3rem; }
+            .hero p { font-size: 1.2rem; }
+            .hosts { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="section hero">
+        <h1>LA MEJOR HAMBURGUESA NO ESTÁ EN TIERRA.</h1>
+        <p>Una experiencia exclusiva para 8 personas por viaje.</p>
+        <a href="#booking-section" class="cta-button">RESERVAR MI PUESTO</a>
+    </section>
+
+    <section class="section manifesto">
+        <p>Nos aburrimos de los restaurantes con muros. De las mesas apretadas y el ruido de la ciudad.<br><br>Creamos Boya Burger para los que prefieren el sonido del mar y una buena conversación.<br><br>Esto no es una cena. Es un escape. Y solo hay lugar para unos pocos.</p>
+    </section>
+
+    <section class="section experience">
+        <div class="experience-grid">
+            <div class="experience-item">
+                <div class="icon">Y</div>
+                <h3>YATE PRIVADO</h3>
+                <p>Solo 8 puestos. Sin multitudes, sin esperas. El yate es tuyo y de tus amigos.</p>
+            </div>
+            <div class="experience-item">
+                <div class="icon">B</div>
+                <h3>3 BURGERS DE AUTOR</h3>
+                <p>Nuestro blend, pan de papa, cheddar premium. Servidas frescas, una por una, directo de la parrilla.</p>
+            </div>
+            <div class="experience-item">
+                <div class="icon">C</div>
+                <h3>BARRA LIBRE</h3>
+                <p>Cerveza artesanal local y vinos seleccionados. Bebe sin preocupaciones, nosotros nos encargamos.</p>
+            </div>
+            <div class="experience-item">
+                <div class="icon">S</div>
+                <h3>ATARDECER EN EL MAR</h3>
+                <p>La mejor vista de la costa. La banda sonora la eliges tú. O el silencio. Tú decides.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section gallery">
+        <div class="gallery-grid">
+            <div class="gallery-item" style="background-image: url('https://placehold.co/600x400/555/f8f8f8?text=Foto+1');"></div>
+            <div class="gallery-item" style="background-image: url('https://placehold.co/600x400/555/f8f8f8?text=Foto+2'); grid-row: span 2; height: 815px;"></div>
+            <div class="gallery-item" style="background-image: url('https://placehold.co/600x400/555/f8f8f8?text=Foto+3');"></div>
+            <div class="gallery-item" style="background-image: url('https://placehold.co/600x400/555/f8f8f8?text=Foto+4');"></div>
+            <div class="gallery-item" style="background-image: url('https://placehold.co/600x400/555/f8f8f8?text=Foto+5');"></div>
+        </div>
+    </section>
+
+    <section class="section hosts">
+        <div class="hosts-photo"></div>
+        <div class="hosts-text">
+            <h2>LOS DUEÑOS DE LA PARRILLA.</h2>
+            <p>Somos Tom y Kike. Crecimos con punk rock y tablas de skate. Después de años creando marcas y restaurantes, decidimos volver a lo básico: buena comida, buena música y buen ambiente. Boya Burger es nuestro proyecto más personal. Nosotros estamos en el barco, en la parrilla y sirviendo las cervezas. Súbete a bordo.</p>
+        </div>
+    </section>
+
+    <section id="booking-section" class="section booking">
+        <h2>ELIGE TU FECHA.</h2>
+        <div class="calendar-placeholder">
+            <p>AQUÍ VA EL CALENDARIO DE RESERVAS</p>
+        </div>
+        <a href="#" class="cta-button">PAGAR Y RESERVAR</a>
+    </section>
+
+</body>
+</html>
